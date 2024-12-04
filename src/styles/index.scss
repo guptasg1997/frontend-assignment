@@ -1,0 +1,81 @@
+div {
+    text-align: center;
+}
+.project-heading {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.projects-data {
+    padding: 0px 100px;
+    &-table {
+        width: 100%;
+    }
+    th {
+        background-color: #666;
+    }
+    td, th {
+        width: 30%;
+        padding: 10px 0px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    tr {
+        width: 100%;
+        &:nth-child(even) {
+            td {
+                background-color: #eee;
+            }
+        }
+    }
+    .pagination {
+        margin-top: 20px;
+        display: inline-flex;
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+        div {
+            align-self: center;
+            text-align: center;
+        }
+        .btn {
+            cursor: pointer;
+        }
+        .left-btn {
+            margin-right: 10px;
+        }
+        .right-btn {
+            margin-left: 10px;  
+        }
+        .of-text {
+            margin-right: 10px;
+            margin-left: 10px;
+            color: #444;
+        }
+        .page-no {
+            color: #444;
+            border: 1px solid #444;
+            min-width: 20px;
+            height: 30px;
+            border-radius: 4px;
+            padding: 0px 4px;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+        .page-limit {
+            color: #444;
+            border: 1px solid #444;
+            min-width: 20px;
+            height: 30px;
+            border-radius: 4px;
+            padding: 0px 4px;
+            line-height: 30px;
+            vertical-align: middle;
+            background-color: #eee;
+        }
+        .disabled {
+            cursor: not-allowed;
+        }
+    }
+}
