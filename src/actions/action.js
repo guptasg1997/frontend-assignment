@@ -14,13 +14,13 @@ const storeProjectStatus = createAction(STORE_PROJECT_STATUS)
 
 
 export const storeProjectDetails = (tries = 3) => {
-    return (getState, dispatch) => {
+    return (dispatch, getState) => {
         dispatch(storeProjectStatus({status: true}))
         axios
         .get(apiURL)
         .then((response) => {
             dispatch(storeProjectDetailsDone({data: response.data}))
-            dispatch(storeProjectStatus({status: true}))
+            dispatch(storeProjectStatus({status: false}))
         })
         .catch((err) => {
             dispatch(storeProjectStatus({status: false}))
